@@ -1,0 +1,44 @@
+zeplin tasarım uygulamasıdır, tasarımcı ile yazılımcı arasındaki  bi katman gibidir.
+müşteriden mutlaka bunu istemelisin ki ne yapıcagını bilesin!
+
+zeplin sayesinde tasarım kodlarının hepsini ordan alabiliriz bu cok iyi bi özelliktir
+burda birçok özelliği sana sunuyor flutter'ı da kurarsın yine zepline swift var ama flutterı da kurarsın
+cok daha hızlı bir geliştirme süreci ortaya cıkarıyor zeplin sana
+
+burda dikkat edilmesi gereken kıısm ise burda styleguide kısmı var burda bu stylelerin ekli olmasını talep et!
+yani color setlerini,text stillerini yazısı boyutu rengi vs sonra spacing and layout kısımlarını hatta companentleri dahi vermesi gerkeiyor
+müşterinin size ki bunları cok rahat şekilde onun istediği tarzda sen geliştirmeyi yapabilesin!
+
+mesela bi sayfayı açıp orda bişeye tıklayıp yan tarafta özelliklerini açıyosun göreibliyorsun hangi özelliklere sahip oldugunu
+burda renk kısımlarına + ya tıklayarak renkleri ekleyebilirsiniz! random renk isimini sana yapıyor bu uygulama
+
+adobe xd ve zeplini kur abi pc ye!
+
+ve burda ekstra birşey katma appi geliştirirken tasarımcıya saygı duy ve onun tasarımlarını hayata geçir buna cok cok dikkat et!
+diyelim sana işte adobe xd den bi proje tasaırmı geliyor onu plugins den "zeplin from xd" diyerekten onu export edebiliyosun!
+
+burda özellikle bu işleri yaparken sunu cok dikakt etmemiz gerekiyor! müşteri daha backende hazırlanmadı servisleri vs daha yokken sen bu 
+tasarımı geliştirmen gerkeiyor. sen bunu yaparken adamdan hani biz yapıyorduk ya dummy list<User> vs yaparken sen burda işte dummy yapmadan önce admadan sunu talep etmelisin knk sen bana ne döneceksin burda atıyorum bi menunuz var ve bunu ekranda geriye dönerek yapıcaksınız burda birden farklı seçenek olucagı için bunların ne formatlarda dönmesi gerketiğini bilmedigimiz için bana bunları bi model olarak verir misin dememiz gerkeiyor aslında! boş olsa da bi back-end ci sana bunların hepsini vermesi ve geliştirmesi gerekiyor tasarımı sen kodluyorsan eger!
+
+okey bu kısımları anladık peki biizm ne yapmamız gerkeiyor ona bkalaım birazcıkda !
+işte senin önüne ekranlar geldi senin bunları yapman gerkeiyor falan pekii burda bi bakıyosun bi companent dolulugu var abi ve burda senin
+sunu demen gerkeiyor hangileri tekrar ediyor knk hangileri daha cok tekrar etmiş bunları not almalısın!
+sonra tasarımları naısl hayata geçiriyorduk bunu biliyosun işte nerde ne kullanman gerketigin az cok aklına geliyor sayfa tasarımını okumalısın burda bunu kullanmalıyım burda bunu yapmalıyım gibi 
+
+ama söyle birşey de olabilir işte kaydırmalı mı yani listview olarak mı gidiyor yoksa pageview olarak mı gidiyor bazı companent widgetları! buna bi dikkat et ama sen atıyorum listview olarka da yapsan sorun yok 
+ve aşşagıya baktıgımızda atıyorum ürünler sıralı bi şekilde gelmiş ürün koyuyorsa aşşagıya dogru kesin gidiyordur diyip ona göre bi listview kullanabilirisn mesela!
+
+ama burda dikkat edilmesi gereken cardların mesela sizeları veya digrekt olarak burda oluşturulan widgetıların sizeleri yani 3 tane yan yana ama size ı büyük ise boyutu düşük olan devicelarda bu sorun teşkil eder sonra kesin mi diye 3 card varsa 3 olduguna emin misin diye sorman lazım sonra işte bazı devicelere göre de bunu 2 ye falan çekebilirsin. tabi yine bunu kodlarken dynamic size yapabilirisn ekran boyutuna göre orası sana kalmıs.
+bunlar için sizer tarzı paketler mevcutmus onlarla anlayabiliyormusuz yine burda işte önemli olan ne yapıcagını bilip ona göre adım atmak işte paket lzımsa paketi bulursun zaten
+
+ama en iyi senaryoda bunu cok iyi yapmak istiyorsan 2 device göre de bu tasarımı ver dersin işte kücük device göre de bunu tasarlarsın olur biter 
+
+işte bunları falan müşteriye söylemen lazım 3 ister 2.5 gözükür falan bazı cihazlarda bu da sorun teşkil eder işte sonra da müşteriden iyi bişey bekleme yani! sen bunu söyle adam düşünmezse onnu hatası ama sen hata yapmamaya calıs 
+
+mesela bazı kısımları anlamayabilirsin mesela bottomSheet companenti vardır sayfa tasarımı gibi ve bunu göremedin bunu anlamamıs olsan da ve bu tasarımı yapan arkadaşlar prototip yapmıs olsalar prototip verip sonrasında sag ustte run kısmı var ona basarsak eger bu bir telefonmus gibi gelir aslında! ve ilgili butona bastıgında o companentler arası geçişi görebilirsin!
+bu sekilde yaptıgında dogru geçişe göre sen bu companenti nasıl yapıcagını görmüş oluyorsun!
+ve bu companent açılısını vs gibi etkenleri de yine sag taraftaki bardan bakabilirsin değiştirebilirsin ama değiştirmemek daha saglıklıdır!
+
+
+dikkat!: fazla listview kullanımı performans öldürür
+zeplin ile daha cok işte color,renk,forn,size dizay konum vs alıyosun ama adobe xd ile hangi sayfa hangi companente baglı vs geçişler olsun bağlantılar olsun vs genel hatları ile izleyebiliyorsun!
