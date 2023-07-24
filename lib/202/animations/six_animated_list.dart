@@ -106,8 +106,8 @@ class _DurationItems {
 
 ///son olarka burda animatedList diye bişi var!
 /// suanda buna girmicez ama basit olarak su sekilde bilsek yeterlidir!
-/// bunun itemBuilder kısmı birazcık daha farklı calısıyor:
-/// context,index,animation alıyor property olarak ve return olarak atıyorum text döndürelim
+/// bunun itemBuilder kısmı birazcık daha farklı :
+/// context,index,animation alıyor property olarak ve calısıyorreturn olarak atıyorum text döndürelim
 /// burda özellikle bilmemiz gereken detay bunu bu sekilde yaptıgında hata alıcaksın cunku bu liste olarak kullanıldıgı için
 /// kaç item oldugunu bilmiyor bu yuzden hata veriyor sen bunu expanded ile sararsan eger ekranın kalan alanı kadar yer kaplar ona
 /// listeyi sıgdırmaya calısır!

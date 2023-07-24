@@ -1,0 +1,32 @@
+
+burası ise ios incelemiştik android kısmı da burda olucak bunu ise open in android studio ile açıyoruz bunu! android dosyasına gelip
+şimdi ios da uygulama ana hattının çiizldiği bir yer vardı biliyosun ama android studioda uygulamanın ana hattının çizildiği yer ise
+app in altındaki build.gradle dosyasıdır sen hakimsin buna biraz :)
+burda çoğu bilgi mevcut configler,versionlar ,neleri desteklediği ,sdk versionlar vs var
+diğer gradle ise yani android klasorunun altındaki gradle da ise daha cok işte kotlin versionu firebase versiyonlarının bulundugu yer
+
+ama burda yine en cok düşülen yerler arasında su var app src main dosyasının altındaki androidManifest dosyası!
+manifest dosyası android projelerinin gerçekten ana noktası budur!
+işte burda userden izin almaları burda manifest dosyasından alıyosun işte kamera izinleri galeri izinleri vs vs
+mesela örnek olarak debug klasorunde var ne yazıyor: <uses-permission android:name="android.permission.INTERNET"/>
+burda internet izni almış mesela! gibi gibi izinler alaabilirsin
+
+yine activity kısmında manifest dosyasının android ile ilgilini customizasyonunu yapabiliyorsun
+
+yine devicenin sadece vertical yani yatayda olmasını falan da sağlıyabiliyoruz!
+
+yine biliyoruz res klasorun altında da iconlarımızı koyuyoruz
+
+yine android klasorun altında app src main res drawable klasorunun altındaki launch dosyasında bişeyler yapabiliyoruz işte
+uygulama acılırkenki rengini verebiliyorsun işte ortada gözükmesi iconun resmin vs gibisnden şeyler!
+yani app açılırkenki giriş şekli gibi düşünebiliriz netflixxin var ya mesela onun gibi!
+
+
+yine işte android studio da android dosyasını açtııgnda izinler ialırken şeyi demeyi unuttum işte ctrl+space ile birçok özelliği
+görebilme yeteneğini. işte bunlar da kod yazar gibi mevcuttur!
+
+yine biz daha öncelerden apk indirmeyi gördük ama hatırlamıyosan da yukarıdaki sekmelerde build yazısı var burdan da yine apk indirebilirsin
+yine apk indireiblirsin ama androidin önerdiği app.bundle indirme şeklidir! : build->flutter->app bundle
+
+ve yine asla apk yı sürükle bırak şeklinde veya maile atmayın cünkü bu sekil kulanım yanlış kullanımdır! firebasenin bunun için
+cok güzel bi çözümü var!  adı : firebase app publishing

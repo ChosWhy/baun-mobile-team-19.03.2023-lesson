@@ -55,7 +55,7 @@ class _AnimationTextViewState extends State<AnimationTextView> {
           AnimatedDefaultTextStyle(
               duration: _DurationItems.durationLow,
               //context.textTheme().titleMedium ?? const TextStyle(),
-              style: (_isVisible ? context.textTheme().headlineMedium : context.textTheme().subtitle1) ?? const TextStyle(),
+              style: (_isVisible ? context.textTheme().headlineMedium : context.textTheme().titleMedium) ?? const TextStyle(),
               child: const Text("furkan")),
         ],
       ),

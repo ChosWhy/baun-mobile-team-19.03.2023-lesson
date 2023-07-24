@@ -1,0 +1,54 @@
+
+bazen ios kısmına geldiğimizde native anlamda kod yazma anlamında burayı kullanmayı bilmemiz gerekiyor nasıl kullanıyoruz şu şekilde:
+diyelim ki hiç bilmiyoruz bunu kullanmayı o zaman önce ios klasorunun içine gidiyoruz!
+önce naptım öpen In yaptım ve explorer ile klasoru açtım sonra ios klasorune girdim
+
+1.eğer ben bir paket kurduysam bu "Runner.xcworkspace" dosyasına geliyor kuruluyor! bizim burdaki dosya üzerinden çalıştırıp burdaki projeyi
+build edip çalıştıraibliyor olmamız gerekiyor!
+2.pods'lar bunlar bizim bazı native paketlerimizin bulundugu klasordur amaa!
+iOS için native kodlar ios klasörü altında yer alır. Örneğin, native Swift kodları ios/Runner altındaki Swift dosyalarında bulunur.
+Projenizde kullanılan Flutter eklentileri veya paketler genellikle bu klasör altında yer alacak ve ios/Runner.xcworkspace dosyası
+ile Xcode projenizi açtığınızda görebileceksiniz.
+(
+    Android için native kodlar android klasörü altında yer alır. Örneğin, native Java kodları android/app/src/main/java klasörü
+    altındaki dosyalarda bulunur. Android Studio veya IntelliJ IDEA gibi IDE'lerle projenizi açtığınızda bu klasördeki dosyaları
+    görebilirsiniz.
+
+    Flutter projelerindeki native kodlar genellikle paketlerin özelleştirilmesi, platforma özgü özelliklerin kullanılması veya
+    performans iyileştirmeleri için kullanılır. Flutter, bu native kodlarla iletişim kurmak için platform kanalları (platform
+    channels) adı verilen bir mekanizma sunar.
+
+    Platform kanalları aracılığıyla Flutter kodu, native kodlarla iletişim kurabilir ve native API'leri kullanabilir. Bu sayede
+     Flutter projenizdeki native kodlara erişim sağlayabilir ve gerektiğinde özelleştirmeler yapabilirsiniz.
+)
+
+ben bulamadım yerleriniama eğer bulabilirsek o paketlere hiç dokunmuyoruz cünkü flutter bize çok yönlü bi geliştirme ortamı sunuyor
+bunu bozarsak eğer sorunlarla karşılaşabiliriz!
+
+peki native Paketler ne demek işte şu:Native paketler, Flutter projelerinde Flutter'ın kendi Dart kodu dışında kullanılan
+platforma özgü (native) kütüphanelerdir. Flutter, farklı platformlarda (iOS, Android) çalışabilme yeteneğine sahip olduğu
+ için, bu platformlarda özel işlevler ve özellikler için platforma özgü kodlara ihtiyaç duyulabilir.
+
+Flutter, platforma özgü işlevleri kullanabilmek için platform kanalları (platform channels) adı verilen bir mekanizma sunar.
+ Platform kanalları, Flutter kodu ile platforma özgü native kod arasında iletişimi sağlar.
+
+Native paketler, platforma özgü özelliklere veya hizmetlere erişmek için kullanılır. Örneğin, bir Flutter projesinde kullanıcı
+konumunu almak için platformun yerel konum servisine ihtiyaç duyulabilir. Bu durumda, Flutter tarafından kullanılan bir native
+ paket, konum servisi ile iletişim kurmak ve konum bilgisini Flutter koduna aktarmak için kullanılır.
+
+Native paketler genellikle projeye dahil edilen özel kütüphanelerdir ve projenin pubspec.yaml dosyasında belirtilir. Flutter
+ projelerinde kullanılan popüler native paketler arasında kamera erişimi, sensör verileri, dosya işlemleri, ağ iletişimi,
+ reklam hizmetleri ve push bildirimleri gibi çeşitli işlevler yer alabilir.
+
+Native paketler, Flutter'ın platformlar arası geliştirme avantajlarını kullanırken, platforma özgü özellikleri ve performansı
+ elde etmek için kullanılır. Bu sayede, Flutter projeleri hem platform bağımsızlığı hem de platforma özgü işlevsellikleri bir
+ arada sunabilir.
+
+şimdi xcode ile biz ios kısmı uygulamaları geliştirebiliyoruz bu uygulamalarda kullanılan diller swift ve object-c dir
+suanda olsaydı xCode onu açardım burda ios klasorunun üzerinden ve birkaç inceleme ve öğrenme söz konsuu olucaktı
+bunu kurabilmek ve kullanabilmek için yalnızca mac ve apple pc ler lazım!
+
+ama önemli kıısmlardan birisi AppDelegate swift kodudur! burası bazen native paketler ekstra birkaç kod isteyen paketleri mevcut
+bunlar için buraya birkaç satırlık kod yazıyoruz onemli ama cok kullanılan yerler degildir! ama yine de bilinmesi iyidir!
+
+

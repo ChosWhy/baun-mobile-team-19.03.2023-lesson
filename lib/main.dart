@@ -15,9 +15,15 @@ import 'package:lessonone/202/service/service_learn_view.dart';
 import 'package:lessonone/202/sheet_learn.dart';
 import 'package:lessonone/202/tab_learn.dart';
 import 'package:lessonone/202/theme/light_theme.dart';
+import 'package:lessonone/303/call_back_metod_learn.dart';
+import 'package:lessonone/303/lottie/lottie_learn.dart';
 import 'package:lessonone/demos/color_demos_view.dart';
 import 'package:lessonone/demos/color_life_cycle.dart';
+import 'package:lessonone/product/global/resource_context.dart';
+import 'package:lessonone/product/global/theme_notifier.dart';
+import 'package:provider/provider.dart';
 import '101/color_learn.dart';
+import '202/alert_learn.dart';
 import '202/animations/five_animation_container.dart';
 import '202/animations/four_animated_icon.dart';
 import '202/animations/seven_animation_pasitioned.dart';
@@ -35,8 +41,23 @@ import '202/service/service_learn_view_advance.dart';
 import '202/state_manage/state_manage_learn_view.dart';
 import '202/theme_learn_view.dart';
 import '202/widget_size_enum_learn_view.dart';
+import '303/reqres_resource/view/req_res_view.dart';
+import '303/reqres_resource/view/req_res_with_provider_view.dart';
+import '303/tabbar_advance.dart';
 import 'demos/my_collections_demos.dart';
 import 'demos/stack_demo_view.dart';
+/* //todo: provider için
+void main() {
+  runApp(MultiProvider(
+    providers: [
+      Provider(create: (context) => ResourceContext(),),
+      ChangeNotifierProvider<ThemeNotifier>(create: (context) => ThemeNotifier(),),
+    ],
+    builder: (context, child) => const LottieLearn(),
+  ));
+}
+ */
+
 void main() {
   runApp(const Main());
 }
@@ -54,6 +75,7 @@ class Main extends StatelessWidget {
       ///bunları 1 kez verdigimde tüm app arayüz sayfalarımda aynı standartı görmüş olucam!
       ///yine de bazı özelleştirmelerde o sayfanın özelleştirmek istedigini yazabilirsin.
       theme: LightTheme().theme,
+      //theme: context.watch<ThemeNotifier>().currentTheme, ///providerlı theme
       /*
       ThemeData.dark().copyWith(
         listTileTheme: const ListTileThemeData(
@@ -111,7 +133,7 @@ class Main extends StatelessWidget {
         )
       ),
        */
-      home: const SheetLearnContinue(),
+      home: const LottieLearn(),
       debugShowCheckedModeBanner: false,
     );
   }
@@ -145,4 +167,36 @@ class Main extends StatelessWidget {
 /// dokumantosyonu ise o kodların ctrl+q ile görürüz
 /// fonksiyonların parametre listelerini görmek için ctrl+p
 /// ctrl+. yaparsam o kısım kodlarını kapatır ama ... seklinde kapatır!
+///
+///
+/// knk önce temelden-zirveye flutter serisini izlicen bu seni advance seviyeye getirir ama bu tek basına yeterli degil
+/// bunun yanında mimari mantıgı için uygulama mimarisi baştan sona izleyebilirsin!
+/// bunu da kaptıktan sonra hızlı ve iyi proje geliştir serisi var onu izleyip artık manyak para kazanmak için use case ile gerçek hayat
+/// istekleri serisi var bunlarla sen artık manyak oldun knk dersin! burda use-case kısımlarını anlıyan adamı tutamazsın
+/// temelden zirveye flutter dersleri videosunu izleidkten sonra knk zaten digerlerini aç arada çıtır bişiler katmak için izlicen
+/// aa ben bunu bitirmem gerek falan diyerekten izleme cerez neyi nasıl yapıyosun onu ögrenmek için izle!
+
+
+///buraya geldik resource_context.dart dan!
+///burda abi theme propertysi vardı aslında bu theme propertysine gelen data bi classdaydı ama biz buraya
+///providerli olan theme yi kullanıcaz okey! o zaman property verisini değiştirelim!
+///      theme: context.watch<ThemeNotifier>().currentTheme, bu sekilde yaptık!
+/// bunu yapınca dark theme geldi!
+/// sonra diyorki işte adam req_res_with_view_provider.dart dosyasına gidip orda bi adet floatactionbutton
+/// koyup ona tıklandıgında themeyı güncellemek istedigini söyledi diyor okey diyorsun!
+/// oraya gidip butonu koydun tıklandıgındaki kod su olucak!:butona her bastıgımda ekranın güncellenmesini istiyorum
+/// okey dedik context.Read() ediyorsun burda neden read ettik cünkü burda bool içinde degilsin sen bool döndürmüyorsun
+/// press işlemi var yani tıklama bu yuzden bir veri dinlenmicek abi buna dikkat işte burda olay kopabiliyor
+/// eger dinlenme işlemleri varsa watch edersin ama burda sadece datayı cagırıcaksın!
+/// ve tıklandıkca tekrardan yenilendigi için read koymak gerekiyor anladın mı simdi tıklandıgında
+/// işlem olucak sürekli olarak takip edilicek bi işlem degil yani!!!!!
+/// son haliyle kod:context.Read<ThemeNotifier>().changeTheme(); bu kod ile de theme yı değiştirmiş olucaksın!
+/// ve sen bunu bütün ekrana vermek istiyorsan o metoda theme degiştikten sonra NotifierListener ekliyosun
+/// haber gönderilmiş oluyor!
+/// bunları ayarladık ve theme değişiyor butonla! başarılır
+/// bu sekilde ne oldu bütün sayfaya haber gönderebilicek bi companent oldu !
+/// peki diğeri ne işe yarıyacaktı? : işte dataların yüklendi reqresviewmodelda
+/// daha sorna sen diyosun ki bu datalarımı save etmek istiyorum locale! okey diyoruz
+/// o zaan bi req_res_provider.dart dosyasına gidelim bi!
+///
 ///

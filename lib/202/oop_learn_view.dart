@@ -30,6 +30,6 @@ class _OOPLearnViewState extends State<OOPLearnView> {
     );
   }
 }
-///burda atamaları yaptık initstate içinde vs
+///burda atamalarıyap tık initstate içinde vs
 ///ve sonrasında burda bi deneme yaptık butona tıkladıgımızda hata verdi cidden!!!
 ///şimdi bi oop_learn.dart a gidelim

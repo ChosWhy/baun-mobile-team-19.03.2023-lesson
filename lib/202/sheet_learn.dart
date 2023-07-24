@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
@@ -145,7 +144,7 @@ class _CustomSheetState extends State<CustomSheet> {
 /// sonrasında zaten showModalBottomSheet e geldimizde orda void demiyor ad T diyor yani geriye deger döndürebilir anlamına geliyor
 /// sonra bunu bi adet result değişkenine atıyorsun ve bunu final yapıp başına await atıyosun yani burası işlem sürecine giricek
 /// ardından kodlar okunucak ve burdan geriye değer dönen değişkenin tipinii kontrol ederek de logiclerini yazabilirsin!
-//////bu kod sayesinde üst contexteki ekrana erişebiliyosun!
+///bu kod sayesinde üst contexteki ekrana erişebiliyosun!
 /// sonra gidelim navigator.of(context).pop kısmına
 ///
 /// ayrıca ben bu sheeti açtıktan sonra elimle kapatırsam geriye null dönüyor!

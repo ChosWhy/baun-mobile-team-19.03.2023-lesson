@@ -33,8 +33,8 @@ class LightTheme {
 }
 
 class _LightColor {
-  final Color _textColor = const Color(0xff131111ff);
-  final Color _buttonColor = const Color(0xff131111ff);
+  final Color _textColor = const Color(0xFF131111ff);
+  final Color _buttonColor = const Color(0xFF131111ff);
   final Color blueBlue = const Color.fromRGBO(20, 67, 210, 1);
   final Color kingGold = const Color.fromRGBO(242, 154, 2, 1);
 }

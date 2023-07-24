@@ -51,7 +51,7 @@ class _PackageLearnViewState extends State<PackageLearnView> with LaunchMixin {
 ///direkt aklına bu paketler gelicek bu paketler sayesinde sen kolaylıkla o sorunları
 ///cözüp projelerini geliştirmeye devam edebilirsin mesela flutter.dev,dart.dev
 ///google.dev,flutter.community gibi kısımlarda cekirdek paketler mevcut veya direkt olarak pub.dev'den
-///yine paketleri inceleyebilirsin!
+///yine aketlperi inceleyebilirsin!
 ///
 /// flutter.dev
 /// flutter.community

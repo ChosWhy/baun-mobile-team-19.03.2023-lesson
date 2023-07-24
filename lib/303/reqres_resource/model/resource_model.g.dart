@@ -19,6 +19,7 @@ Map<String, dynamic> _$ResourceModelToJson(ResourceModel instance) =>
     };
 
 Data _$DataFromJson(Map<String, dynamic> json) => Data(
+      $enumDecode(_$ColorEnumEnumMap, json['colorEnum']),
       id: json['id'] as int?,
       name: json['name'] as String?,
       year: json['year'] as int?,
@@ -32,4 +33,10 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'year': instance.year,
       'color': instance.color,
       'pantoneValue': instance.pantoneValue,
+      'colorEnum': _$ColorEnumEnumMap[instance.colorEnum]!,
     };
+
+const _$ColorEnumEnumMap = {
+  ColorEnum.white: 0,
+  ColorEnum.black: 151515,
+};

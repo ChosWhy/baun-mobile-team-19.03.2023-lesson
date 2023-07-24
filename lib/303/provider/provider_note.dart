@@ -24,3 +24,12 @@
 /// başka bi senaryo ise: 2 tane objemiz olsun işte 1. ekran usercontext 2. ekran productcontext var
 /// burda işte usercontexte data değiştiginde productcontextin de değişmesini istiyoruz işte sen bunu
 /// provider içindeki proxyprovider özelliği ile yapabiliyosun
+///
+///
+/// şimdi burda senaryom ne olucak işte bu req_res_view.dart projesi için kullanmak istiyoruz sadece bu future için
+/// sadece bu future arasında view_model yerine ben bunu provider ile yapmak istiyorum hocam diyoruz
+/// ve ekran konusmalarını ve yönetimlerini bu yapıcak diyoruz okey o zaman suanda learn kısmı oldugundan dolayı noteyi
+/// buralara yazıyorum. burda yapmamız gereken klasorlemeye dikkat view_model klasorunun içinde yazıyoruz
+///gidelim o zaman req_res_provider.dart dosyasına!
+///
+///
