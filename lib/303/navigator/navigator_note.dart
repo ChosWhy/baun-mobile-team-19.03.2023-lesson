@@ -24,6 +24,7 @@
 /// 1. auto route bu gerçekten kolaylık saglayan bi paket!
 /// 2. go_router bu paket te deep link ,web linklerini vs yönetmek için verilmiş bi poaket! ama tabi yine de route kontrolünü de saglıyor
 ///
+/// todo: routes
 /// şimdi core olarak ele alırken ilk başta ögrenicegimiz tarz sudur: main.dart dosyasındaki bir property olan route yazdıgında cıkan
 /// propertylerdir ama gerçek hayatta routes propertysini kullanmazsın!
 /// ama olsun anlatalım!
@@ -38,5 +39,31 @@
 /// ya da bi property var onunla da yakalayabiliyorsun datayı ama hangisiydi onu unuttum
 ///
 /// neyse şimdi bi şunu handle edelim abi daha iyi oturması için bunun için navigator klasoru olusturup halledelim
+/// temp olarak 3 page olusturup bu navigator için alıştırma olur bunları yapalım!
+/// olusturduk geldik 3 tane dosya!
+/// anlamak adına işte içine sadece stles stful widgetlar atıyosun amac bunları kullanmak navigator için!
+///
+/// şimdi hepsini ayarladıktan sonra homedetailview.dart dosyasında abi ben bi String? id alıyorum cünkü data işlemlerini
+/// göstericez!
+/// ayarlamalar tamamdır!
+///
+/// şimdi main.dart da ben routes kısmına geldigimde splash ekran loading kısmı yani lottieLearn kısmı olucak okey
+/// bundan sonra işte bu 3 sayfa için gidilicek String ifadeleri ayarlıyosun
+/// bu arada ufak bi trickipoint : auto route ile burda sen String ifadeleri verirken query sorgu vs yapabiliryorsun!
+/// tabi onGenerateRoute ile de yapabiliyosun ama paketlerde daha iyi olabiliyor!
+///
+/// şimdi burda bunları su sekilde yazdıgında bunlr böyle kalmamalı!
+/// routes: {
+//         "/" : (context) => const LottieLearn(),
+//         "/home" : (context) => const NavigateHomeView(),
+//         "/homeDetail" : (context) => const NavigateHomeDetailView(),
+//       },
+
+///bunlar kesinlikle ayrılmak zorunda burdan!!! bunnu classı productın altında navigator adlı bi class oraya bunu ver abi!
+/// sonra sen bu sınıfın içinde bunları yönet abi!
+/// sonra da main.dart dosyasındaki route kısmını alıp o dosyaya aktarıyosun!
+/// ha tabi suandaki o haliyle problem var mı tabiki de var ama sunada sorun yo onu halletcez sonralarda!
+/// peki o zaman bi navigator_routes.dart a gidelim
+///
 ///
 ///

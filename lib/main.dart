@@ -16,11 +16,16 @@ import 'package:lessonone/202/sheet_learn.dart';
 import 'package:lessonone/202/tab_learn.dart';
 import 'package:lessonone/202/theme/light_theme.dart';
 import 'package:lessonone/303/call_back_metod_learn.dart';
+import 'package:lessonone/303/feed_view.dart';
 import 'package:lessonone/303/lottie/lottie_learn.dart';
+import 'package:lessonone/303/mobx_image_picker/view/mobx_image_upload_view.dart';
+import 'package:lessonone/303/navigator/navigate_home_detail_view.dart';
 import 'package:lessonone/demos/color_demos_view.dart';
 import 'package:lessonone/demos/color_life_cycle.dart';
 import 'package:lessonone/product/global/resource_context.dart';
 import 'package:lessonone/product/global/theme_notifier.dart';
+import 'package:lessonone/product/navigator/navigator_custom.dart';
+import 'package:lessonone/product/navigator/navigator_routes.dart';
 import 'package:provider/provider.dart';
 import '101/color_learn.dart';
 import '202/alert_learn.dart';
@@ -41,11 +46,13 @@ import '202/service/service_learn_view_advance.dart';
 import '202/state_manage/state_manage_learn_view.dart';
 import '202/theme_learn_view.dart';
 import '202/widget_size_enum_learn_view.dart';
+import '303/navigator/navigate_home_view.dart';
 import '303/reqres_resource/view/req_res_view.dart';
 import '303/reqres_resource/view/req_res_with_provider_view.dart';
 import '303/tabbar_advance.dart';
 import 'demos/my_collections_demos.dart';
 import 'demos/stack_demo_view.dart';
+import 'package:lessonone/product/navigator/navigator_layer.dart';
 /* //todo: provider için
 void main() {
   runApp(MultiProvider(
@@ -62,7 +69,7 @@ void main() {
   runApp(const Main());
 }
 
-class Main extends StatelessWidget {
+class Main extends StatelessWidget with NavigatorCustom{
   const Main({Key? key}) : super(key: key);
 
   @override
@@ -133,8 +140,33 @@ class Main extends StatelessWidget {
         )
       ),
        */
-      home: const LottieLearn(),
+      // home: const LottieLearn(),
       debugShowCheckedModeBanner: false,
+
+      // initialRoute: "/",
+      /*routes: {
+        "/" : (context) => const LottieLearn(),
+        "/feed" : (context) => const FeedView(),
+      },*/
+
+      // routes: NavigatorRoutes().items,
+      /*onUnknownRoute: (settings) {
+        return MaterialPageRoute(builder: (context) {
+          return const LottieLearn();
+        },);
+      },
+      onGenerateRoute: onGenerateRoute,
+        *//*(settings) {
+          // settings.arguments == "deneme";
+          if(settings.name == "/home"){
+            return MaterialPageRoute(builder: (context) {
+              return const LottieLearn();
+            },);
+          }
+          return null;
+        },*//*
+      navigatorKey: NavigatorManagerSingleton.instance.navigatorGlobalKey, //ismi değiştirdim vardı böyle class!*/
+      home: const MobxImageUpload(),
     );
   }
 }
@@ -167,6 +199,7 @@ class Main extends StatelessWidget {
 /// dokumantosyonu ise o kodların ctrl+q ile görürüz
 /// fonksiyonların parametre listelerini görmek için ctrl+p
 /// ctrl+. yaparsam o kısım kodlarını kapatır ama ... seklinde kapatır!
+/// yorum satıra alma : ctrl+/ veya block olarak almak ise ctrl+shift+/
 ///
 ///
 /// knk önce temelden-zirveye flutter serisini izlicen bu seni advance seviyeye getirir ama bu tek basına yeterli degil

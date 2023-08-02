@@ -2,6 +2,7 @@ import 'package:lessonone/303/reqres_resource/service/reqres_service.dart';
 import 'package:lessonone/303/reqres_resource/view/req_res_view.dart';
 import 'package:lessonone/product/service/project_dio.dart';
 import 'package:lessonone/202/cache/shared_preference/shared_preferences_cache_learn.dart';
+import 'package:lessonone/product/service/project_network.dart';
 
 import '../model/resource_model.dart';
 
@@ -12,12 +13,21 @@ abstract class ReqresViewModel extends ChangeLoadingStateFull<ReqResView> with P
   //List<ResourceModel> resources = [];
   List<Data> resources = [];
 
-
+  /*
   @override
   void initState() {
     super.initState();
     reqresService = ReqresService(service);
     _fetch();
+  }
+   */
+
+  ///network_manager.dart dosyası için yeni bi initState olusturucam!
+  @override
+  void initState(){
+    super.initState();
+    reqresService = ReqresService(ProjectNetworkManager.instance.service);
+    ProjectNetworkManager.instance.addBaseHeaderToToken("Furkan");
   }
 
   //TODO şimdi burda değişiklik yapıyoruz
@@ -90,4 +100,7 @@ abstract class ReqresViewModel extends ChangeLoadingStateFull<ReqResView> with P
 /// boş liste döndürdüğümüzü gösteriyoruz!
 /// en son da view ekranında da resource[index].'datalar' şeklinde yazdırabiliyoruz!
 /// gidelim view ekranına şimdi ve görelim ordaki kodları!!! :req_res_view.dart a gidiliyor
+///
+
+///buraya geldim project_networkden! düzenleme yapıcam!
 ///

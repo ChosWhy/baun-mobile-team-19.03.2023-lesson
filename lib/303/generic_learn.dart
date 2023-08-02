@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 
 class UserManagement<T extends AdminUser>{
   final T admin;
@@ -46,12 +47,26 @@ class FYModel<T>{
 }
 
 
-class GenericUser{
+class GenericUser extends Equatable{
   final String name;
   final String id;
   final int money;
 
   GenericUser(this.name, this.id, this.money);
+
+  //todo: here for list
+  bool findUserName(String name){
+    return this.name == name;
+  }
+
+  @override
+  String toString() {
+    return 'GenericUser{name: $name, id: $id, money: $money}';
+  }
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [id]; //burda id leri eşitse eşittir sayıyor!! burası test kısmı için eklendi
 }
 
 class AdminUser extends GenericUser{

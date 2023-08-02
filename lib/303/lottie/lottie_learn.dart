@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lessonone/product/constant/duration_items.dart';
 import 'package:lessonone/product/constant/lottie_items.dart';
-import 'package:lessonone/product/global/theme_notifier.dart';
+import 'package:lessonone/product/navigator/navigator_routes.dart';
 import 'package:lottie/lottie.dart';
-import 'package:provider/provider.dart';
 
 
 class LottieLearn extends StatefulWidget {
@@ -27,14 +26,31 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
     super.dispose();
     controller.dispose();
   }
+
+  //todo: for navigator!
+
+  Future<void> navigateToHomeFutureDelayed() async {
+    await Future.delayed(DurationItems.durationLow);
+  }
+
+  void navigateToHome() {
+    navigateToHomeFutureDelayed();
+    Navigator.of(context).pushNamed(NavigateRoutesItems.home.withSlash);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          navigateToHome(); //todo: for navigation
+        },
+      ),
       appBar: AppBar(
         actions: [
           InkWell(
             onTap: () async {
-              await controller.animateTo(isLight ? 0.5 : 1);
+              await controller.animateTo(!isLight ? 0.5 : 1);
               //context.read<ThemeNotifier>().changeTheme();
               isLight ? print("lightTheme") : print("DarkTheme");
               isLight = !isLight;
