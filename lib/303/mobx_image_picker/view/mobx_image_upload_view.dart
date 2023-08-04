@@ -237,3 +237,15 @@ final List<XFile> medias = await picker.pickMultipleMedia()
 /// son olarak da bi adet button atıyarak da save işlemini gerçekleştiricez!
 ///
 /// herşey bittikten sornra expanded içindekileri extract edersek daha iyi olur!
+
+
+///todo: picker dan devam bu kısım 18.video!
+/// şimdi bizim önceden yaptıgımız işlemlerde işte view ekranında image fetchFromLibrary metodundan geliyor işte bizim
+/// senaryomuz da su: ya biz bu işlemi şu şekilde yapsaydık ? işte birden fazla durumu handle etmek isteseydim
+/// burda ne yapabilirdik? bunu bi gösterelim abi!
+/// cünkü şöyle birşey var bu metoda gittigimizde hocam diyoruz işte adam bu componente basınca 3 tane durum cıkıcak işte
+/// fotoya basınca izin alma cıkıyor ya işte izin alma gelmesin de bottomSheette birşey gelsin diyoruz o zaman bu componenti
+/// yapalım abi 303 ün ilk componenti diyebiliriz! bu klasorun adını testable olarak acıyoruz solid prensiblerini anlatıcaz
+/// burda! uygulamalı!!!
+/// bu yuzden bi gidelim abi image_generic_picker a!
+///

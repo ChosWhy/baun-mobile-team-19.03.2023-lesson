@@ -96,7 +96,7 @@ class _SaveAndNavigateWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(onPressed: (){
-      context.read<ReqresProvider>().saveToLocal(context.read<ResourceContext>());
+      context.read<ReqresProvider>().saveToLocal(context.read<ResourceContext>(),context.read<ReqresProvider>().resources);
       Navigator.of(context).push(MaterialPageRoute(builder: (context) {
         return const ImageLearn202();
       },));

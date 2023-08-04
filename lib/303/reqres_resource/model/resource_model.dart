@@ -32,9 +32,9 @@ class Data extends Equatable{
   final String? color;
   @JsonKey(fromJson: _fetchCustomMoney)
   final String? pantoneValue;
-  final ColorEnum colorEnum;
+  final ColorEnum? colorEnum;
 
-  const Data(this.colorEnum, {this.id, this.name, this.year, this.color, this.pantoneValue});
+  const Data({this.id, this.name, this.year, this.color, this.pantoneValue,this.colorEnum});
 
   /*
   int get colorValue{

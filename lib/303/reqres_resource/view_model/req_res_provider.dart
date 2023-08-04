@@ -20,12 +20,18 @@ class ReqresProvider extends ChangeNotifier{ //extends kısmı sonradan eklendi!
 
   Future<void> _fetch() async {
     _changeLoading();
-    resources = (await reqresService.fetchResourceItem())?.data ?? [];
+    // resources = (await reqresService.fetchResourceItem())?.data ?? [];
+    resources = await fetchItems();//todo:test edilebilir kod için!
     _changeLoading();
   }
 
-  void saveToLocal(ResourceContext resourceContext){
+  Future<List<Data>> fetchItems() async {//todo:test edilebilir kod için!
+    return (await reqresService.fetchResourceItem())?.data ?? [];
+  }
+
+  bool? saveToLocal(ResourceContext resourceContext,List<Data> resources){
     resourceContext.saveModel(ResourceModel(data: resources));
+    return resourceContext.model?.data?.isNotEmpty;
   }
 }
 
