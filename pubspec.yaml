@@ -38,6 +38,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   dio: ^5.1.1
 
+  #network
+  vexana: ^3.5.2
+
   #cache
   shared_preferences: ^2.1.1
 
@@ -55,10 +58,12 @@ dependencies:
   build_context: ^3.0.0
   image_picker: ^1.0.1
 
+  #context
+  kartal: ^3.2.0
+
   #core
   equatable: ^2.0.5
   collection: ^1.17.2
-
 
   #States
   provider: ^6.0.5

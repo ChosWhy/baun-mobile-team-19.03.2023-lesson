@@ -232,4 +232,4 @@ class Main extends StatelessWidget with NavigatorCustom{
 /// daha sorna sen diyosun ki bu datalarımı save etmek istiyorum locale! okey diyoruz
 /// o zaan bi req_res_provider.dart dosyasına gidelim bi!
 ///
-///
+/// mesela random image lazım oldu onlar bile var!
