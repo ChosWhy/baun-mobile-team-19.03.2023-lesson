@@ -3,14 +3,15 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:ui' as _i6;
+import 'dart:async' as _i5;
+import 'dart:ui' as _i7;
 
 import 'package:lessonone/303/reqres_resource/model/resource_model.dart' as _i4;
 import 'package:lessonone/303/reqres_resource/service/reqres_service.dart'
     as _i2;
 import 'package:lessonone/303/reqres_resource/view_model/req_res_provider.dart'
     as _i3;
-import 'package:lessonone/product/global/resource_context.dart' as _i5;
+import 'package:lessonone/product/global/resource_context.dart' as _i6;
 import 'package:mockito/mockito.dart' as _i1;
 
 // ignore_for_file: type=lint
@@ -86,8 +87,18 @@ class MockReqresProvider extends _i1.Mock implements _i3.ReqresProvider {
         returnValueForMissingStub: false,
       ) as bool);
   @override
+  _i5.Future<List<_i4.Data>> fetchItems() => (super.noSuchMethod(
+        Invocation.method(
+          #fetchItems,
+          [],
+        ),
+        returnValue: _i5.Future<List<_i4.Data>>.value(<_i4.Data>[]),
+        returnValueForMissingStub:
+            _i5.Future<List<_i4.Data>>.value(<_i4.Data>[]),
+      ) as _i5.Future<List<_i4.Data>>);
+  @override
   bool? saveToLocal(
-    _i5.ResourceContext? resourceContext,
+    _i6.ResourceContext? resourceContext,
     List<_i4.Data>? resources,
   ) =>
       (super.noSuchMethod(
@@ -101,7 +112,7 @@ class MockReqresProvider extends _i1.Mock implements _i3.ReqresProvider {
         returnValueForMissingStub: null,
       ) as bool?);
   @override
-  void addListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void addListener(_i7.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #addListener,
           [listener],
@@ -109,7 +120,7 @@ class MockReqresProvider extends _i1.Mock implements _i3.ReqresProvider {
         returnValueForMissingStub: null,
       );
   @override
-  void removeListener(_i6.VoidCallback? listener) => super.noSuchMethod(
+  void removeListener(_i7.VoidCallback? listener) => super.noSuchMethod(
         Invocation.method(
           #removeListener,
           [listener],

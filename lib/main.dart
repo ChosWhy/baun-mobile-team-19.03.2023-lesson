@@ -50,6 +50,7 @@ import '303/navigator/navigate_home_view.dart';
 import '303/reqres_resource/view/req_res_view.dart';
 import '303/reqres_resource/view/req_res_with_provider_view.dart';
 import '303/tabbar_advance.dart';
+import '404/bloc/feature/login/view/login_view.dart';
 import 'demos/my_collections_demos.dart';
 import 'demos/stack_demo_view.dart';
 import 'package:lessonone/product/navigator/navigator_layer.dart';
@@ -166,7 +167,7 @@ class Main extends StatelessWidget with NavigatorCustom{
           return null;
         },*//*
       navigatorKey: NavigatorManagerSingleton.instance.navigatorGlobalKey, //ismi değiştirdim vardı böyle class!*/
-      home: const MobxImageUpload(),
+      home: const LoginView(),
     );
   }
 }
