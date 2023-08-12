@@ -157,7 +157,8 @@ class Main extends StatelessWidget with NavigatorCustom{
         },);
       },
       onGenerateRoute: onGenerateRoute,
-        *//*(settings) {
+        */
+      /*(settings) {
           // settings.arguments == "deneme";
           if(settings.name == "/home"){
             return MaterialPageRoute(builder: (context) {
@@ -167,6 +168,12 @@ class Main extends StatelessWidget with NavigatorCustom{
           return null;
         },*//*
       navigatorKey: NavigatorManagerSingleton.instance.navigatorGlobalKey, //ismi değiştirdim vardı böyle class!*/
+
+      builder: (context, child) {
+        return MediaQuery(data: MediaQuery.of(context).copyWith(
+          textScaleFactor: 1
+        ), child: child ?? const SizedBox());
+      },
       home: const LoginView(),
     );
   }
