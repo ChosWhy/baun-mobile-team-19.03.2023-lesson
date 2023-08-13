@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:lessonone/101/list_view_builder_learn.dart';
@@ -24,6 +25,8 @@ import 'package:lessonone/demos/color_demos_view.dart';
 import 'package:lessonone/demos/color_life_cycle.dart';
 import 'package:lessonone/product/global/resource_context.dart';
 import 'package:lessonone/product/global/theme_notifier.dart';
+import 'package:lessonone/product/init/localization_init.dart';
+import 'package:lessonone/product/init/product_init.dart';
 import 'package:lessonone/product/navigator/navigator_custom.dart';
 import 'package:lessonone/product/navigator/navigator_routes.dart';
 import 'package:provider/provider.dart';
@@ -66,8 +69,17 @@ void main() {
 }
  */
 
-void main() {
-  runApp(const Main());
+Future<void> main() async {
+  final _productInit = ProductInit();
+  _productInit.init();
+  runApp(
+    EasyLocalization(
+        supportedLocales: _productInit.localizationInit.supportedLocales,
+        path: _productInit.localizationInit.localizationPath, // <-- change the path of the translation files
+        fallbackLocale: _productInit.localizationInit.fallbackLocale,
+        child: const Main()
+    ),
+  );
 }
 
 class Main extends StatelessWidget with NavigatorCustom{
@@ -175,6 +187,9 @@ class Main extends StatelessWidget with NavigatorCustom{
         ), child: child ?? const SizedBox());
       },
       home: const LoginView(),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }
