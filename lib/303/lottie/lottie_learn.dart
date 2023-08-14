@@ -3,6 +3,7 @@ import 'package:lessonone/product/constant/duration_items.dart';
 import 'package:lessonone/product/constant/lottie_items.dart';
 import 'package:lessonone/product/navigator/navigator_routes.dart';
 import 'package:lottie/lottie.dart';
+import 'package:uikit/uikit.dart';
 
 
 class LottieLearn extends StatefulWidget {
@@ -64,7 +65,7 @@ class _LottieLearnState extends State<LottieLearn> with TickerProviderStateMixin
   }
 }
 
-class LoadingLottie extends StatelessWidget {
+/*class LoadingLottie extends StatelessWidget {
   const LoadingLottie({
     super.key,
   });
@@ -75,7 +76,7 @@ class LoadingLottie extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(child: Lottie.asset(_loadingLottie));
   }
-}
+}*/
 
 ///lottie yi widget olarak kullanmak için su lottie. şeklinde kullanıyoruz
 ///ama bu linki alabilmek için sunu yapman gerekiyor knk
