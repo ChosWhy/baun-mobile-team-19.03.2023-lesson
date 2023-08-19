@@ -6,7 +6,7 @@ import 'package:lessonone/main.dart';
 import 'package:lessonone/product/navigator/navigator_routes.dart';
 import '../../303/lottie/lottie_learn.dart';
 
-mixin NavigatorCustom<T extends Main> on Widget{
+mixin NavigatorCustom<T extends /*Main*/MainForHive> on Widget{
   Route<dynamic>? onGenerateRoute(RouteSettings routeSettings){
     if(routeSettings.name?.isEmpty ?? true) return _navigateToNormal(child: const LottieLearn());
     // if(routeSettings.name == NavigatorRoutes.init) return _navigateToNormal(const LottieLearn());

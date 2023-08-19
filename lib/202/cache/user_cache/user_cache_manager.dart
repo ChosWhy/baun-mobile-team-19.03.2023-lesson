@@ -76,7 +76,7 @@ Bu şekilde, JSON encode ve decode işlemleri aracılığıyla verilerinizi bir 
 ///yine burda saveItems kaydedici fonksiyonlar future olmalı!
 
 ///
-/// yani kısaca jsonı encode ettiğinde Stringe ceviiriyosun json encode ettiginde objeye ceviriyosun
+/// yani kısaca jsonı encode ettiğinde Stringe ceviiriyosun json decode ettiginde objeye ceviriyosun
 ///
 /// burda yukarıdaki mapda items içeriisndeki bütün userları dönüyor burdaki element aslında user!
 /// ama sunu da unutmamak lazımmıs json encode ve decode işlemleri hafıza bellek acısından oldukca pahalı bi işlemdir

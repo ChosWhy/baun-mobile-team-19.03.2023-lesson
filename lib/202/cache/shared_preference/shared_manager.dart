@@ -88,7 +88,7 @@ class SharedManager {
 /// ama bu kontrol oldugu için dikkat sadece bu dosya için geçerli private yapcaz
 /// tabi içini doldururken exception yapmayı ögrendik hemen bi null ise exceptionunu ayarlıyalım
 /// sornasında ordaki exceptionu buraya getirip çagırıoruz
-/// daha sonrası için bu checkPreferecences metodunu hepsinde cagırırım sonra safe bi sekilde entegre
+/// daha sonrası için bu checkPreferecences mteodunu hepsinde cagırırım sonra safe bi sekilde entegre
 /// etmiş olurum!
 ///
 /// yine bunu kontrol ettirmeyebilirsin o senin senaryona özel!!!
@@ -112,12 +112,12 @@ class SharedManager {
 /// okey bunu yapalim init kodunu yazmıyyalım
 /// view ekranına yani learn dosyasına gidiyoruz şimdi!
 ///
-///
+//
 /// şimdi gelidk manager kısmana ve burdan devam
 /// bu sefer adamdan list<String> şekilde veri alcıaz! ve önce burda kaydedeciyi halettik
 /// sonrasında da getlisini olusturucaz yani bi save,bi get bu sefer get yaparken value almıyoruz
 /// metotları hallettikten sonra sunu düşünüyoruz biz bunu model seviyesinde nasıl cıkartabiliriz?
 /// okey o zaman biz bi adet cache içeriisnde user-cache klasörü açıp içine de user-cache-manager yapalım
-/// cünkü cache ederken useri bunu da bir manageri olmalı
+/// cünkü cache ederken useri bunun da bir manageri olmalı
 /// şimdi bu usercachemanager dosyasına gidelim
 ///

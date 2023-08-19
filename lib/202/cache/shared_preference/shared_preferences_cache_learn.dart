@@ -29,7 +29,7 @@ class _SharedPreferencesLearnViewState
 
   void _initAlize() {
     changeLoading();
-    _sharedManager.init().then((value) => getDefaultValue());
+    _sharedManager.init().then((_) => getDefaultValue());
     changeLoading();
   }
   /*
@@ -214,7 +214,7 @@ abstract class ChangeLoadingStateFull<T extends StatefulWidget>
 /// napıyorum .then kullanarak burda işlemi atamıs oluyorum içine de getDefaultValue metodunu
 /// atıyorum bu sayede hatayı çözmüş oluyorum!
 ///
-///
+//
 /// son olarak farklı bir senaryo yapalım!
 /// müşteri diyorki user classım olucak burda dedi ve bu classda 3 tane contribute olsun
 /// şimdi olustrudugumuz user class ve userItems classlarında datalarımız var bu dataların cachelenmesini

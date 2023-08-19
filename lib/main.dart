@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:lessonone/101/list_view_builder_learn.dart';
 import 'package:lessonone/101/list_view_learn.dart';
 import 'package:lessonone/101/navigation_learn.dart';
@@ -21,6 +22,7 @@ import 'package:lessonone/303/feed_view.dart';
 import 'package:lessonone/303/lottie/lottie_learn.dart';
 import 'package:lessonone/303/mobx_image_picker/view/mobx_image_upload_view.dart';
 import 'package:lessonone/303/navigator/navigate_home_detail_view.dart';
+import 'package:lessonone/404/hive/view/hive_view.dart';
 import 'package:lessonone/demos/color_demos_view.dart';
 import 'package:lessonone/demos/color_life_cycle.dart';
 import 'package:lessonone/product/global/resource_context.dart';
@@ -69,14 +71,14 @@ void main() {
 }
  */
 
-Future<void> main() async {
+/*Future<void> main() async {
   final _productInit = ProductInit();
   _productInit.init();
   runApp(
     EasyLocalization(
         supportedLocales: _productInit.localizationInit.supportedLocales,
         path: _productInit.localizationInit.localizationPath, // <-- change the path of the translation files
-        fallbackLocale: _productInit.localizationInit.fallbackLocale,
+        // fallbackLocale: _productInit.localizationInit.fallbackLocale,
         child: const Main()
     ),
   );
@@ -96,7 +98,7 @@ class Main extends StatelessWidget with NavigatorCustom{
       ///yine de bazı özelleştirmelerde o sayfanın özelleştirmek istedigini yazabilirsin.
       theme: LightTheme().theme,
       //theme: context.watch<ThemeNotifier>().currentTheme, ///providerlı theme
-      /*
+      *//*
       ThemeData.dark().copyWith(
         listTileTheme: const ListTileThemeData(
           contentPadding: EdgeInsets.zero,
@@ -152,25 +154,25 @@ class Main extends StatelessWidget with NavigatorCustom{
           padding: EdgeInsets.zero,
         )
       ),
-       */
+       *//*
       // home: const LottieLearn(),
       debugShowCheckedModeBanner: false,
 
       // initialRoute: "/",
-      /*routes: {
+      *//*routes: {
         "/" : (context) => const LottieLearn(),
         "/feed" : (context) => const FeedView(),
-      },*/
+      },*//*
 
       // routes: NavigatorRoutes().items,
-      /*onUnknownRoute: (settings) {
+      *//*onUnknownRoute: (settings) {
         return MaterialPageRoute(builder: (context) {
           return const LottieLearn();
         },);
       },
       onGenerateRoute: onGenerateRoute,
-        */
-      /*(settings) {
+        *//*
+      *//*(settings) {
           // settings.arguments == "deneme";
           if(settings.name == "/home"){
             return MaterialPageRoute(builder: (context) {
@@ -178,21 +180,38 @@ class Main extends StatelessWidget with NavigatorCustom{
             },);
           }
           return null;
-        },*//*
-      navigatorKey: NavigatorManagerSingleton.instance.navigatorGlobalKey, //ismi değiştirdim vardı böyle class!*/
+        },*//**//*
+      navigatorKey: NavigatorManagerSingleton.instance.navigatorGlobalKey, //ismi değiştirdim vardı böyle class!*//*
 
       builder: (context, child) {
         return MediaQuery(data: MediaQuery.of(context).copyWith(
           textScaleFactor: 1
         ), child: child ?? const SizedBox());
       },
-      home: const LoginView(),
+      home: const HiveView(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
     );
   }
+}*/
+
+Future<void> main() async {
+  await Hive.initFlutter("lib/404/hive/database_for_example");
+  runApp(const MainForHive());
 }
+
+class MainForHive extends StatelessWidget {
+  const MainForHive({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: HiveView(),
+    );
+  }
+}
+
 
 ///yavaştan artık bazı şeyleri da öğrenme zamanı gelmiş bunlarda core ve product klasörüdür
 ///core kalsoru : projeye özgü olmayan başka projelerde de kullanılabilicek olan companentleri core klasörüne atıyoruz!
